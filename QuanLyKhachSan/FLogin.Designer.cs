@@ -30,14 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FLogin));
             this.PanelLogin = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblResetpass = new System.Windows.Forms.LinkLabel();
+            this.chekPass = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblError = new System.Windows.Forms.Label();
+            this.BtnLogin = new Guna.UI2.WinForms.Guna2Button();
             this.txbPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.txbUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.BtnExit = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.lblError = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.PanelLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -45,9 +47,11 @@
             // PanelLogin
             // 
             this.PanelLogin.BackColor = System.Drawing.Color.White;
+            this.PanelLogin.Controls.Add(this.lblResetpass);
+            this.PanelLogin.Controls.Add(this.chekPass);
             this.PanelLogin.Controls.Add(this.label2);
             this.PanelLogin.Controls.Add(this.lblError);
-            this.PanelLogin.Controls.Add(this.guna2Button1);
+            this.PanelLogin.Controls.Add(this.BtnLogin);
             this.PanelLogin.Controls.Add(this.txbPassword);
             this.PanelLogin.Controls.Add(this.txbUsername);
             this.PanelLogin.Controls.Add(this.label1);
@@ -57,6 +61,75 @@
             this.PanelLogin.Name = "PanelLogin";
             this.PanelLogin.Size = new System.Drawing.Size(1112, 550);
             this.PanelLogin.TabIndex = 0;
+            // 
+            // lblResetpass
+            // 
+            this.lblResetpass.AutoSize = true;
+            this.lblResetpass.LinkColor = System.Drawing.Color.Red;
+            this.lblResetpass.Location = new System.Drawing.Point(823, 362);
+            this.lblResetpass.Name = "lblResetpass";
+            this.lblResetpass.Size = new System.Drawing.Size(82, 13);
+            this.lblResetpass.TabIndex = 9;
+            this.lblResetpass.TabStop = true;
+            this.lblResetpass.Text = "Quên Mật Khẩu";
+            this.lblResetpass.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblResetpass_LinkClicked);
+            // 
+            // chekPass
+            // 
+            this.chekPass.AutoSize = true;
+            this.chekPass.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.chekPass.CheckedState.BorderRadius = 0;
+            this.chekPass.CheckedState.BorderThickness = 0;
+            this.chekPass.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.chekPass.Location = new System.Drawing.Point(655, 362);
+            this.chekPass.Name = "chekPass";
+            this.chekPass.Size = new System.Drawing.Size(121, 17);
+            this.chekPass.TabIndex = 8;
+            this.chekPass.Text = "Hiển Thị Mật Khẩu !";
+            this.chekPass.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.chekPass.UncheckedState.BorderRadius = 0;
+            this.chekPass.UncheckedState.BorderThickness = 0;
+            this.chekPass.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.chekPass.CheckedChanged += new System.EventHandler(this.chekPass_CheckedChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.LightGray;
+            this.label2.Location = new System.Drawing.Point(350, 519);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(411, 22);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "*Bạn sẽ chấp nhận điều khoản và điều kiện của chúng tôi !";
+            // 
+            // lblError
+            // 
+            this.lblError.AutoSize = true;
+            this.lblError.ForeColor = System.Drawing.Color.Red;
+            this.lblError.Location = new System.Drawing.Point(716, 471);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(177, 13);
+            this.lblError.TabIndex = 6;
+            this.lblError.Text = "Tên đăng nhập hoặc mật khẩu sai !";
+            this.lblError.Click += new System.EventHandler(this.lblError_Click);
+            // 
+            // BtnLogin
+            // 
+            this.BtnLogin.BorderRadius = 18;
+            this.BtnLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.BtnLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.BtnLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.BtnLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.BtnLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.BtnLogin.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnLogin.ForeColor = System.Drawing.Color.White;
+            this.BtnLogin.Location = new System.Drawing.Point(591, 399);
+            this.BtnLogin.Name = "BtnLogin";
+            this.BtnLogin.Size = new System.Drawing.Size(404, 58);
+            this.BtnLogin.TabIndex = 5;
+            this.BtnLogin.Text = "ĐĂNG NHẬP";
+            this.BtnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
             // 
             // txbPassword
             // 
@@ -80,6 +153,7 @@
             this.txbPassword.SelectedText = "";
             this.txbPassword.Size = new System.Drawing.Size(415, 67);
             this.txbPassword.TabIndex = 4;
+            this.txbPassword.TextChanged += new System.EventHandler(this.txbPassword_TextChanged);
             // 
             // txbUsername
             // 
@@ -103,6 +177,7 @@
             this.txbUsername.SelectedText = "";
             this.txbUsername.Size = new System.Drawing.Size(415, 67);
             this.txbUsername.TabIndex = 3;
+            this.txbUsername.TextChanged += new System.EventHandler(this.txbUsername_TextChanged);
             // 
             // label1
             // 
@@ -143,43 +218,6 @@
             this.BtnExit.TabIndex = 0;
             this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
-            // guna2Button1
-            // 
-            this.guna2Button1.BorderRadius = 18;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(591, 374);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(404, 58);
-            this.guna2Button1.TabIndex = 5;
-            this.guna2Button1.Text = "ĐĂNG NHẬP";
-            // 
-            // lblError
-            // 
-            this.lblError.AutoSize = true;
-            this.lblError.ForeColor = System.Drawing.Color.Red;
-            this.lblError.Location = new System.Drawing.Point(716, 464);
-            this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(177, 13);
-            this.lblError.TabIndex = 6;
-            this.lblError.Text = "Tên đăng nhập hoặc mật khẩu sai !";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.LightGray;
-            this.label2.Location = new System.Drawing.Point(350, 519);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(411, 22);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "*Bạn sẽ chấp nhận điều khoản và điều kiện của chúng tôi !";
-            // 
             // FLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -208,8 +246,10 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2TextBox txbPassword;
         private System.Windows.Forms.Label lblError;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button BtnLogin;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.LinkLabel lblResetpass;
+        private Guna.UI2.WinForms.Guna2CheckBox chekPass;
     }
 }
 

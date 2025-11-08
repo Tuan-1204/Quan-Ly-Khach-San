@@ -25,5 +25,43 @@ namespace QuanLyKhachSan
                 Application.Exit();
             }
         }
+        //quên mật khẩu
+        private void lblResetpass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+        //hiển thị mật khẩu
+        private void chekPass_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chekPass.Checked)
+            {
+                txbPassword.PasswordChar = '\0'; // Hiển thị mật khẩu
+            }
+            else
+            {
+                txbPassword.PasswordChar = '*'; // Ẩn mật khẩu
+            }
+        }
+        //mật khẩu dạng *
+        private void txbPassword_TextChanged(object sender, EventArgs e)
+        {
+            //ẩn lỗi khi người dùng nhập lại 
+            lblError.Visible = false;
+        }
+        //check username 
+        private void txbUsername_TextChanged(object sender, EventArgs e)
+        {
+            lblError.Visible = false;
+        }
+        // khi ấn thì chuyển vào dashboard hệ thống
+        private void BtnLogin_Click(object sender, EventArgs e)
+        {
+
+        }
+        //hiển thị lỗi khi username và password không đúng
+        private void lblError_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
