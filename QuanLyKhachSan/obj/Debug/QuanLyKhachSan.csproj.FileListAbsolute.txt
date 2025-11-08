@@ -1,0 +1,12 @@
+E:\Đồ án cá nhân\Quản Lý Khách Sạn\Project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.exe.config
+E:\Đồ án cá nhân\Quản Lý Khách Sạn\Project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.exe
+E:\Đồ án cá nhân\Quản Lý Khách Sạn\Project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.pdb
+E:\Đồ án cá nhân\Quản Lý Khách Sạn\Project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\Guna.UI2.dll
+E:\Đồ án cá nhân\Quản Lý Khách Sạn\Project\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.AssemblyReference.cache
+E:\Đồ án cá nhân\Quản Lý Khách Sạn\Project\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.FLogin.resources
+E:\Đồ án cá nhân\Quản Lý Khách Sạn\Project\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.Properties.Resources.resources
+E:\Đồ án cá nhân\Quản Lý Khách Sạn\Project\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.GenerateResource.cache
+E:\Đồ án cá nhân\Quản Lý Khách Sạn\Project\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.CoreCompileInputs.cache
+E:\Đồ án cá nhân\Quản Lý Khách Sạn\Project\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKh.7BBD220C.Up2Date
+E:\Đồ án cá nhân\Quản Lý Khách Sạn\Project\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.exe
+E:\Đồ án cá nhân\Quản Lý Khách Sạn\Project\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.pdb
