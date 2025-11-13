@@ -10,3 +10,5 @@ E:\Đồ án cá nhân\Quản Lý Khách Sạn\Project\QuanLyKhachSan\QuanLyKhac
 E:\Đồ án cá nhân\Quản Lý Khách Sạn\Project\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKh.7BBD220C.Up2Date
 E:\Đồ án cá nhân\Quản Lý Khách Sạn\Project\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.exe
 E:\Đồ án cá nhân\Quản Lý Khách Sạn\Project\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.pdb
+E:\Đồ án cá nhân\Quản Lý Khách Sạn\Project\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.exe.config
+E:\Đồ án cá nhân\Quản Lý Khách Sạn\Project\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.FDashBoard.resources

@@ -112,6 +112,7 @@
             this.lblError.Size = new System.Drawing.Size(177, 13);
             this.lblError.TabIndex = 6;
             this.lblError.Text = "Tên đăng nhập hoặc mật khẩu sai !";
+            this.lblError.Visible = false;
             this.lblError.Click += new System.EventHandler(this.lblError_Click);
             // 
             // BtnLogin
@@ -141,14 +142,14 @@
             this.txbPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txbPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txbPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txbPassword.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbPassword.ForeColor = System.Drawing.Color.Black;
             this.txbPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txbPassword.IconLeft = ((System.Drawing.Image)(resources.GetObject("txbPassword.IconLeft")));
             this.txbPassword.IconLeftSize = new System.Drawing.Size(30, 30);
             this.txbPassword.Location = new System.Drawing.Point(591, 277);
             this.txbPassword.Name = "txbPassword";
-            this.txbPassword.PasswordChar = '\0';
+            this.txbPassword.PasswordChar = '*';
             this.txbPassword.PlaceholderText = "Nhập tên đăng nhập...";
             this.txbPassword.SelectedText = "";
             this.txbPassword.Size = new System.Drawing.Size(415, 67);
@@ -165,7 +166,7 @@
             this.txbUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txbUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txbUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbUsername.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txbUsername.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbUsername.ForeColor = System.Drawing.Color.Black;
             this.txbUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txbUsername.IconLeft = ((System.Drawing.Image)(resources.GetObject("txbUsername.IconLeft")));

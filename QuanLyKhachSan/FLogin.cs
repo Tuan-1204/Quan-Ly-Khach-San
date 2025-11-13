@@ -15,6 +15,7 @@ namespace QuanLyKhachSan
         public FLogin()
         {
             InitializeComponent();
+            this.AcceptButton = this.BtnLogin;
         }
 
         private void BtnExit_Click(object sender, EventArgs e)
@@ -56,7 +57,19 @@ namespace QuanLyKhachSan
         // khi ấn thì chuyển vào dashboard hệ thống
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-
+            if(txbUsername.Text == "admin" && txbPassword.Text == "admin")
+            {
+                lblError.Visible = false;
+                FDashBoard ds = new FDashBoard();
+                this.Hide();
+                ds.Show();
+           
+            }
+            else
+            {
+                lblError.Visible = true;
+                txbPassword.Clear();
+            }
         }
         //hiển thị lỗi khi username và password không đúng
         private void lblError_Click(object sender, EventArgs e)
