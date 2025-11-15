@@ -33,7 +33,9 @@ namespace QuanLyKhachSan
 
         private void btnAddRoom_Click(object sender, EventArgs e)
         {
-
+            PanelMoving.Left = btnAddRoom.Left ;
+            uC_AddRoom1.Visible = true;
+            uC_AddRoom1.BringToFront();
         }
 
         private void btnAddCustomer_Click(object sender, EventArgs e)
@@ -59,6 +61,12 @@ namespace QuanLyKhachSan
         private void PanelMoving_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void FDashBoard_Load(object sender, EventArgs e)
+        {
+            uC_AddRoom1.Visible = false;
+            btnAddRoom.PerformClick();
         }
     }
 }
