@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,7 +44,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.btnAddRoom = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.DgvAddRoom = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.btnDeleteRooms = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvAddRoom)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -62,7 +68,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(37, 74);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1185, 563);
+            this.dataGridView1.Size = new System.Drawing.Size(0, 0);
             this.dataGridView1.TabIndex = 1;
             // 
             // label2
@@ -118,7 +124,9 @@
             this.txtTypeRoom.ItemHeight = 30;
             this.txtTypeRoom.Items.AddRange(new object[] {
             "Phòng có điều hòa",
-            "Phòng không có điều hòa"});
+            "Phòng không có điều hòa",
+            "Phòng VIP",
+            "Phòng có ghế tình yêu"});
             this.txtTypeRoom.Location = new System.Drawing.Point(1341, 246);
             this.txtTypeRoom.Name = "txtTypeRoom";
             this.txtTypeRoom.Size = new System.Drawing.Size(381, 36);
@@ -202,16 +210,92 @@
             this.btnAddRoom.Size = new System.Drawing.Size(180, 45);
             this.btnAddRoom.TabIndex = 10;
             this.btnAddRoom.Text = "Thêm Phòng";
+            this.btnAddRoom.Click += new System.EventHandler(this.btnAddRoom_Click);
             // 
             // guna2Elipse1
             // 
             this.guna2Elipse1.BorderRadius = 30;
             this.guna2Elipse1.TargetControl = this;
             // 
+            // DgvAddRoom
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.DgvAddRoom.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.DgvAddRoom.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvAddRoom.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.DgvAddRoom.ColumnHeadersHeight = 4;
+            this.DgvAddRoom.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgvAddRoom.DefaultCellStyle = dataGridViewCellStyle3;
+            this.DgvAddRoom.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.DgvAddRoom.Location = new System.Drawing.Point(37, 84);
+            this.DgvAddRoom.Name = "DgvAddRoom";
+            this.DgvAddRoom.ReadOnly = true;
+            this.DgvAddRoom.RowHeadersVisible = false;
+            this.DgvAddRoom.Size = new System.Drawing.Size(1185, 563);
+            this.DgvAddRoom.TabIndex = 11;
+            this.DgvAddRoom.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.DgvAddRoom.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.DgvAddRoom.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.DgvAddRoom.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.DgvAddRoom.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.DgvAddRoom.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.DgvAddRoom.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.DgvAddRoom.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.DgvAddRoom.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.DgvAddRoom.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DgvAddRoom.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.DgvAddRoom.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.DgvAddRoom.ThemeStyle.HeaderStyle.Height = 4;
+            this.DgvAddRoom.ThemeStyle.ReadOnly = true;
+            this.DgvAddRoom.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.DgvAddRoom.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.DgvAddRoom.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DgvAddRoom.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.DgvAddRoom.ThemeStyle.RowsStyle.Height = 22;
+            this.DgvAddRoom.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.DgvAddRoom.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // btnDeleteRooms
+            // 
+            this.btnDeleteRooms.BorderRadius = 18;
+            this.btnDeleteRooms.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
+            this.btnDeleteRooms.BorderThickness = 1;
+            this.btnDeleteRooms.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(221)))));
+            this.btnDeleteRooms.CheckedState.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteRooms.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDeleteRooms.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDeleteRooms.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDeleteRooms.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDeleteRooms.FillColor = System.Drawing.Color.White;
+            this.btnDeleteRooms.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteRooms.ForeColor = System.Drawing.Color.Black;
+            this.btnDeleteRooms.Location = new System.Drawing.Point(1341, 592);
+            this.btnDeleteRooms.Name = "btnDeleteRooms";
+            this.btnDeleteRooms.Size = new System.Drawing.Size(180, 45);
+            this.btnDeleteRooms.TabIndex = 12;
+            this.btnDeleteRooms.Text = "Xóa Phòng";
+            this.btnDeleteRooms.Click += new System.EventHandler(this.btnDeleteRooms_Click);
+            // 
             // UC_AddRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnDeleteRooms);
+            this.Controls.Add(this.DgvAddRoom);
             this.Controls.Add(this.btnAddRoom);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.label5);
@@ -225,7 +309,11 @@
             this.Controls.Add(this.label1);
             this.Name = "UC_AddRoom";
             this.Size = new System.Drawing.Size(1882, 852);
+            this.Load += new System.EventHandler(this.UC_AddRoom_Load);
+            this.Enter += new System.EventHandler(this.UC_AddRoom_Enter);
+            this.Leave += new System.EventHandler(this.UC_AddRoom_Leave);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvAddRoom)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -245,5 +333,7 @@
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2Button btnAddRoom;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI2.WinForms.Guna2DataGridView DgvAddRoom;
+        private Guna.UI2.WinForms.Guna2Button btnDeleteRooms;
     }
 }
